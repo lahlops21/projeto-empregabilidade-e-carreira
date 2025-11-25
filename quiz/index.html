@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual Carreira de TI Combina com Você?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Formas decorativas de fundo -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div class="screen active" id="intro">
+            <div class="intro-screen">
+                <div class="logo-tech">
+                    <div class="logo-glow"></div>
+                    <div class="logo-icon">&lt;/&gt;</div>
+                </div>
+                <h1 class="main-title">
+                    <span class="title-gradient">Qual Carreira de TI</span>
+                    <span class="title-gradient">Combina com Você?</span>
+                </h1>
+                <p class="subtitle">Descubra seu perfil tech em 12 perguntas</p>
+                <button class="btn-start" onclick="startQuiz()">
+                    <span>Começar Quiz</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+                <p class="small-text">levará apenas 3 minutinhos</p>
+            </div>
+        </div>
+
+        <!-- Tela de Pergunta -->
+        <div class="screen" id="question">
+            <div class="question-screen">
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span class="progress-text" id="questionNumber"></span>
+                        <span class="progress-percent" id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress"></div>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <h2 class="question-text" id="questionText"></h2>
+                    <div class="options" id="options"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Resultado -->
+        <div class="screen" id="result">
+            <div class="result-screen">
+                <div class="confetti-container">
+                    <div class="confetti"></div>
+                    <div class="confetti"></div>
+                    <div class="confetti"></div>
+                    <div class="confetti"></div>
+                    <div class="confetti"></div>
+                </div>
+                
+                <div class="result-card">
+                    <p class="result-label">seu resultado</p>
+                    <div class="result-icon" id="resultIcon"></div>
+                    <h2 class="result-title" id="resultTitle"></h2>
+                    <p class="result-subtitle" id="resultSubtitle"></p>
+                    <p class="result-description" id="resultDescription"></p>
+                    
+                    <div class="result-skills">
+                        <h3>habilidades que você vai usar:</h3>
+                        <ul id="resultSkills"></ul>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-primary" onclick="shareResult()">
+                            compartilhar resultado
+                        </button>
+                        <button class="btn-secondary" onclick="restartQuiz()">
+                            refazer quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
