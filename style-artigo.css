@@ -527,3 +527,108 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Boxes especiais */
+.info-box {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(192, 107, 232, 0.1));
+    border-left: 6px solid #4A90E2;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 50px 0;
+}
+
+.info-box h3 {
+    color: #4A90E2;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.info-box p {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+.video-recommendation {
+    background: linear-gradient(135deg, #FF6B9D 0%, #C06BE8 100%);
+    border-radius: 20px;
+    padding: 35px;
+    margin: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+.video-recommendation p {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.15em;
+}
+
+.video-link {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: #C06BE8;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s;
+    text-transform: lowercase;
+}
+
+.video-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.closing-cta {
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(192, 107, 232, 0.1));
+    border-radius: 20px;
+    padding: 35px;
+    margin: 50px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2D1B4E;
+}
+
+.sources {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(192, 107, 232, 0.2);
+}
+
+.sources h3 {
+    color: #6B4F8A;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+}
+
+.sources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sources li {
+    margin-bottom: 12px;
+}
+
+.sources a {
+    color: #FF6B9D;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.sources a:hover {
+    color: #C06BE8;
+}
+
+.card-img-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 25px 25px 0 0;
+}
