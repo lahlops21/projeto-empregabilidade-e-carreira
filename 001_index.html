@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Descubra Carreiras em TI</title>
+    <title>Codebreak - Descubra Carreiras em TI</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Formas decorativas de fundo -->
+    <div class="noise-overlay"></div>
+
     <div class="bg-shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
@@ -16,9 +18,8 @@
         <div class="shape shape-5"></div>
     </div>
 
-    <!-- Menu de Navegação -->
     <nav id="navbar">
-        <a href="#" class="logo">seu nome</a>
+        <a href="#" class="logo">codebreak</a>
         <ul class="nav-links">
             <li><a href="#home">Início</a></li>
             <li><a href="#about">Quem somos</a></li>
@@ -27,57 +28,55 @@
         </ul>
     </nav>
 
-    <!-- Seção Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Transforme <span class="highlight">ideias</span> em realidade</h1>
-            <p>Descubra conteúdo que inspira e conecta</p>
+            <h1>De <span class="hacker-effect">zero</span> a tech: <br>seu guia honesto</h1>
+            <p class="fade-in-text">desmistificando carreiras em TI para quem ainda está descobrindo o caminho</p>
         </div>
     </section>
 
-    <!-- Seção Quem Somos -->
     <section class="about" id="about">
-        <h2>Quem somos</h2>
+        <h2>quem somos</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Somos uma plataforma dedicada a compartilhar conhecimento sobre carreiras em Tecnologia da Informação. Nossa missão é criar conteúdo de qualidade que transforme perspectivas e conecte jovens ao tema que realmente importa: escolher a carreira tech certa!</p>
+                <p>Oi! Somos a Bia e a Laís, duas estudantes de TI que sabem exatamente como é se sentir perdida na hora de escolher uma carreira tech. Eu vim de Relações Internacionais sem NENHUMA base em tecnologia, e a Laís também teve suas dúvidas no começo dessa jornada.</p>
                 <br>
-                <p>Com uma equipe apaixonada por tecnologia e educação, trabalhamos para entregar artigos relevantes, insights valiosos e experiências interativas que fazem diferença no seu dia a dia.</p>
+                <p>Criamos este espaço porque entendemos na pele a dificuldade de escolher entre tantas áreas quando você mal sabe a diferença entre frontend e backend. Aqui você encontra informação real, sem aquele papo técnico complicado, para te ajudar a descobrir qual área de TI realmente combina com você! 💜</p>
             </div>
             <div class="about-image">
-                🚀
+                <img src="imagens/bia_lais.jpg" alt="Nós duas" style="object-position: center 30%;">
             </div>
         </div>
     </section>
 
-    <!-- Seção de Artigos -->
     <section class="articles" id="articles">
         <h2>nossos artigos</h2>
         <div class="articles-grid">
+            
             <div class="article-card">
-                <div class="article-image">📱</div>
+                <img src="imagens/ia-cotidiano.png" alt="Ilustração IA" class="card-img-fix">
                 <div class="article-content">
-                    <h3> O impacto que você ainda não notou</h3>
-                    <p> Por que vivemos numa era disruptiva e o impacto disso na sua vida</p>
+                    <h3>O impacto que você ainda não notou</h3>
+                    <p>Por que vivemos numa era disruptiva e o impacto disso na sua vida</p>
                     <a href="002_artigo.html" class="read-more">ler mais →</a>
                 </div>
             </div>
 
             <div class="article-card">
-                <div class="article-image">💻</div>
+                <img src="imagens/ui-ux.png" alt="Ilustração UX UI" class="card-img-fix">
                 <div class="article-content">
-                    <h3>Programação Para Iniciantes</h3>
-                    <p>Dê os primeiros passos no mundo da tecnologia e aprenda a criar soluções.</p>
-                    <a href="/artigo.html" class="read-more">ler mais →</a>
+                    <h3>ux/ui: descomplicando a sopa de letrinhas</h3>
+                    <p>Entenda a diferença entre a "carinha" e a "vibe" do produto e descubra as carreiras da área.</p>
+                    <a href="ui-ux.html" class="read-more">ler mais →</a>
                 </div>
             </div>
 
             <div class="article-card">
-                <div class="article-image">🤔</div>
+                <img src="imagens/front-back.png" alt="Ilustração Front vs Back" class="card-img-fix">
                 <div class="article-content">
-                    <h3>Será que Programar é para mim? </h3>
-                    <p>Seus medos de programar são bobos e podemos provar!</p>
-                    <a href="/artigo.html" class="read-more">ler mais →</a>
+                    <h3>front-end vs back-end: o duelo final</h3>
+                    <p>Descubra qual lado da força combina com você: a beleza do visual ou a lógica dos bastidores?</p>
+                    <a href="front-vs-back.html" class="read-more">ler mais →</a>
                 </div>
             </div>
 
@@ -85,8 +84,8 @@
                 <div class="article-image">👩‍💻</div>
                 <div class="article-content">
                     <h3>Perdendo o medo da 'tela preta'</h3>
-                <p>O mundo de carreiras que você não sabia que existia dentro da TI e outros mitos</p>
-                    <a href="/artigo.html" class="read-more">ler mais →</a>
+                    <p>O mundo de carreiras que você não sabia que existia dentro da TI e outros mitos</p>
+                    <a href="#" class="read-more">ler mais →</a>
                 </div>
             </div>
 
@@ -95,23 +94,21 @@
                 <div class="article-content">
                     <h3>Machine Learning na Prática</h3>
                     <p>Entenda como funcionam os algoritmos por trás das principais aplicações de IA.</p>
-                    <a href="/artigo.html" class="read-more">ler mais →</a>
+                    <a href="#" class="read-more">ler mais →</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Seção CTA Questionário -->
     <section class="cta" id="questionnaire">
         <h2>Pronto para descobrir mais?</h2>
         <p>Responda nosso quiz e receba recomendações personalizadas</p>
         <a href="./quiz/index.html" class="cta-button">iniciar quiz</a>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024. Todos os direitos reservados.</p>
+        <p>&copy; 2025 code break. todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
