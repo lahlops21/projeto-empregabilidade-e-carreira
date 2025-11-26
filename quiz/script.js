@@ -1,226 +1,180 @@
 const questions = [
     {
-        text: "Seu aplicativo de música favorito para de funcionar. Qual sua primeira reação?",
+        text: "Você vai planejar uma viagem de férias com amigos. Qual é a sua primeira atitude?",
         options: [
-            { text: "Procuro saber se a empresa está 'fora do ar' ou se o problema é só comigo.", scores: { cloud: 2, infra: 2 } },
-            { text: "Entro nas redes sociais para ver o que as pessoas estão achando disso.", scores: { ux: 3 } },
-            { text: "Reparo se o visual do aplicativo parece 'quebrado' ou se botões sumiram.", scores: { frontend: 3 } },
-            { text: "Tento lembrar se parou em um horário de pico que todo mundo usa.", scores: { data: 3 } },
-            { text: "Me preocupo se é um ataque hacker ou se meus dados estão seguros.", scores: { security: 3 } }
+            { text: "Monto uma planilha detalhada com custos, horários e rotas para nada dar errado.", scores: { backend: 3, data: 2 } },
+            { text: "Pesquiso fotos dos lugares mais bonitos e 'instagramáveis' para gente visitar.", scores: { frontend: 3, ux: 1 } },
+            { text: "Garanto que todos tenham seguro viagem, vacinas em dia e cópias dos documentos.", scores: { security: 3 } },
+            { text: "Procuro o jeito mais rápido e eficiente de chegar lá, evitando conexões inúteis.", scores: { cloud: 3, infra: 1 } },
+            { text: "Pesquiso a opinião de quem já foi para garantir que a experiência vai ser agradável.", scores: { ux: 3 } }
         ]
     },
     {
-        text: "Você está comprando um eletrônico novo. O que mais pesa na sua decisão?",
+        text: "Você está cozinhando um prato novo e complexo. Como você lida com a receita?",
         options: [
-            { text: "A ficha técnica completa: velocidade, memória, capacidade.", scores: { backend: 3 } },
-            { text: "O design do produto e a beleza da embalagem.", scores: { frontend: 3, ux: 1 } },
-            { text: "Gráficos que comparam qual é o mais rápido entre as marcas.", scores: { data: 3 } },
-            { text: "Comentários de usuários dizendo que foi 'muito fácil de configurar e usar'.", scores: { ux: 3 } },
-            { text: "As garantias de segurança, como leitor de digital ou criptografia.", scores: { security: 3 } },
-            { text: "A qualidade das conexões (Wi-Fi, 5G) e a velocidade da internet.", scores: { infra: 3 } }
+            { text: "Sigo o passo a passo lógico rigorosamente. Se diz 10g, eu coloco 10g.", scores: { backend: 3, infra: 1 } },
+            { text: "Foco na apresentação: o sabor importa, mas o prato tem que ficar lindo na mesa.", scores: { frontend: 3 } },
+            { text: "Dou um jeito de sujar menos louça e otimizar o tempo de forno para terminar rápido.", scores: { cloud: 3 } },
+            { text: "Provo o tempo todo para garantir que quem for comer vai gostar do tempero.", scores: { ux: 3 } },
+            { text: "Analiso 5 receitas diferentes antes de começar para encontrar a média dos ingredientes.", scores: { data: 3 } }
         ]
     },
     {
-        text: "Em um trabalho em grupo, qual papel você naturalmente assume?",
+        text: "Se você tivesse um superpoder para resolver problemas do mundo, qual seria?",
         options: [
-            { text: "O 'Arquiteto': Desenho a estrutura principal e como as partes se conectam.", scores: { backend: 3 } },
-            { text: "O 'Apresentador': Garanto que a entrega final seja clara e bonita.", scores: { frontend: 3, ux: 1 } },
-            { text: "O 'Otimizador': Procuro jeitos de fazer o time trabalhar mais rápido e com menos esforço.", scores: { cloud: 3 } },
-            { text: "O 'Mediador': Garanto que o resultado final realmente atende ao que o professor pediu.", scores: { ux: 3 } },
-            { text: "O 'Analista': Junto todas as fontes de pesquisa para encontrar a 'grande ideia'.", scores: { data: 3 } }
+            { text: "Visão de Raio-X: Para ver a estrutura invisível das coisas e como elas se sustentam.", scores: { backend: 2, infra: 3 } },
+            { text: "Ilusionismo: Capacidade de criar visuais incríveis que encantam quem vê.", scores: { frontend: 3 } },
+            { text: "Precognição: Ler padrões do passado para prever o futuro e evitar desastres.", scores: { data: 3, security: 1 } },
+            { text: "Telepatia: Entender exatamente o que as pessoas sentem e precisam sem elas falarem.", scores: { ux: 3 } },
+            { text: "Campo de Força: Criar barreiras indestrutíveis para proteger quem eu amo.", scores: { security: 3 } },
+            { text: "Multiplicação: Estar em vários lugares ao mesmo tempo para fazer mais coisas.", scores: { cloud: 3 } }
         ]
     },
     {
-        text: "Se você fosse construir um carro, qual parte te daria mais orgulho?",
+        text: "Você comprou um móvel para montar em casa (tipo IKEA). Qual sua estratégia?",
         options: [
-            { text: "O motor: perfeitamente ajustado para máxima potência e eficiência.", scores: { backend: 3 } },
-            { text: "A sensação de dirigir e a facilidade de usar os botões do painel.", scores: { ux: 3 } },
-            { text: "A linha de montagem: totalmente automatizada, rápida e sem falhas.", scores: { cloud: 3 } },
-            { text: "O computador de bordo, que analisa o consumo e prevê manutenção.", scores: { data: 3 } },
-            { text: "O sistema de alarme e travas, para ser impossível de roubar.", scores: { security: 3 } },
-            { text: "O sistema de GPS e a conexão 5G com outros carros.", scores: { infra: 3 } }
+            { text: "Organizo todos os parafusos e peças por tamanho antes de começar qualquer coisa.", scores: { data: 2, backend: 2 } },
+            { text: "Olho a foto da caixa para ver como tem que ficar no final e vou tentando encaixar.", scores: { frontend: 3 } },
+            { text: "Verifico se a estrutura está firme e se não vai cair na cabeça de ninguém.", scores: { security: 2, infra: 2 } },
+            { text: "Penso: 'Será que se eu usar uma parafusadeira elétrica eu termino na metade do tempo?'", scores: { cloud: 3 } },
+            { text: "Monto pensando em onde ele vai ficar melhor para não atrapalhar a passagem das pessoas.", scores: { ux: 3, infra: 1 } }
         ]
     },
     {
-        text: "Qual tipo de problema você prefere resolver?",
+        text: "Em um jogo de estratégia ou RPG, que tipo de jogador você é?",
         options: [
-            { text: "Um quebra-cabeça lógico complexo, com muitas partes móveis.", scores: { backend: 3 } },
-            { text: "Um processo manual e lento que poderia ser feito por uma máquina.", scores: { cloud: 3 } },
-            { text: "Um mistério onde você precisa encontrar pistas em um mar de informações.", scores: { data: 3 } },
-            { text: "Um aplicativo confuso que ninguém sabe como usar direito.", scores: { ux: 3 } },
-            { text: "Um rascunho feio que precisa ser transformado em algo bonito.", scores: { frontend: 3 } },
-            { text: "Descobrir como um mágico fez o truque ou como um ladrão entrou no banco.", scores: { security: 3 } }
+            { text: "O Estrategista: Conheço todas as regras e combos matemáticos para vencer.", scores: { backend: 3, data: 1 } },
+            { text: "O Customizador: Passo horas criando a aparência perfeita para o meu personagem.", scores: { frontend: 3, ux: 1 } },
+            { text: "O Suporte: Garanto que o time todo tenha recursos e ninguém morra.", scores: { infra: 3, security: 1 } },
+            { text: "O Speedrunner: Quero encontrar o caminho mais curto e rápido para zerar o jogo.", scores: { cloud: 3 } },
+            { text: "O Explorador: Converso com todos os NPCs para descobrir a história completa.", scores: { ux: 2, data: 2 } }
         ]
     },
     {
-        text: "Você está organizando seu espaço de trabalho. O que é prioridade?",
+        text: "Seu amigo te conta um segredo. O que passa na sua cabeça?",
         options: [
-            { text: "A estética: cores, iluminação e um arranjo visualmente agradável.", scores: { frontend: 3, ux: 1 } },
-            { text: "A eficiência: tudo no lugar certo, acesso fácil, sem bagunça.", scores: { backend: 2, cloud: 2 } },
-            { text: "O conforto: uma cadeira ergonômica e tudo ajustado para *meu* uso.", scores: { ux: 3 } },
-            { text: "A conexão: garantir que o Wi-Fi esteja rápido e que todos os cabos estejam certos.", scores: { infra: 3 } },
-            { text: "A organização: meus arquivos e livros catalogados para eu achar tudo rápido.", scores: { data: 2, backend: 1 } }
+            { text: "Guardo a sete chaves. Ninguém vai saber, nem sob tortura.", scores: { security: 3 } },
+            { text: "Tento conectar essa informação com outras coisas que sei para entender o cenário todo.", scores: { data: 3, backend: 1 } },
+            { text: "Penso em como aconselhar meu amigo para ele se sentir melhor.", scores: { ux: 3 } },
+            { text: "Analiso se essa informação muda a dinâmica do nosso grupo de amigos.", scores: { infra: 2 } },
+            { text: "Já imagino a 'cena de filme' que essa história daria.", scores: { frontend: 2 } }
         ]
     },
     {
-        text: "Numa festa que você está ajudando a organizar, qual sua principal preocupação?",
+        text: "Você entra em um quarto extremamente bagunçado. O que te incomoda mais?",
         options: [
-            { text: "Que a música e a iluminação criem o clima perfeito.", scores: { frontend: 2, ux: 1 } },
-            { text: "Que a logística de bebida/comida funcione sem parar, mesmo se chegar mais gente.", scores: { cloud: 3 } },
-            { text: "Que as pessoas estejam confortáveis e se sentindo incluídas.", scores: { ux: 3 } },
-            { text: "Tentar adivinhar qual música vai fazer mais gente dançar, baseado no que tocou antes.", scores: { data: 3 } },
-            { text: "Garantir que só os convidados entrem e que ninguém quebre nada.", scores: { security: 3 } },
-            { text: "Verificar se o Wi-Fi está bom e se a caixa de som está bem conectada.", scores: { infra: 3 } }
+            { text: "A falta de lógica: roupas misturadas com livros, nada faz sentido.", scores: { backend: 3 } },
+            { text: "O visual feio: cores que não combinam e a sensação de caos visual.", scores: { frontend: 3 } },
+            { text: "A dificuldade de andar: tem coisas no caminho atrapalhando o fluxo.", scores: { ux: 3, infra: 1 } },
+            { text: "A ineficiência: levaria horas para achar qualquer coisa ali.", scores: { cloud: 3 } },
+            { text: "O risco: tropeçar em algo, quebrar algo ou perder algo importante.", scores: { security: 3 } }
         ]
     },
     {
-        text: "Qual destas frases faz mais sentido para você?",
+        text: "Se você fosse escrever um livro, como começaria?",
         options: [
-            { text: "'A forma inspira a ação. A beleza importa.'", scores: { frontend: 3, ux: 1 } },
-            { text: "'A função vem primeiro. A beleza é um bônus.'", scores: { backend: 3 } },
-            { text: "'A experiência é tudo. Se for difícil, está errado.'", scores: { ux: 3 } },
-            { text: "'A eficiência é a chave. Mais rápido é sempre melhor.'", scores: { cloud: 3 } },
-            { text: "'A prova está nos números. O que não se mede, não se gerencia.'", scores: { data: 3 } },
-            { text: "'Mais vale prevenir do que remediar.'", scores: { security: 3 } },
-            { text: "'Uma corrente é tão forte quanto seu elo mais fraco.'", scores: { infra: 3, security: 1 } }
-        ]
-    },
-     {
-        text: "Se você estivesse criando um jogo, você preferiria:",
-        options: [
-            { text: "Desenhar os personagens, os cenários e os efeitos visuais.", scores: { frontend: 3 } },
-            { text: "Criar as regras do jogo: o que acontece quando você pula, como funciona o inventário.", scores: { backend: 3 } },
-            { text: "Garantir que o jogo funcione liso, sem travar, em qualquer aparelho.", scores: { cloud: 3 } },
-            { text: "Analisar em qual fase os jogadores mais desistem, para ajustar a dificuldade.", scores: { data: 3 } },
-            { text: "Ajustar a 'sensação' de jogar: a resposta dos controles e a fluidez dos pulos.", scores: { ux: 3, frontend: 1 } }
-        ]
-    },
-    {
-        text: "Como você prefere aprender algo novo e complexo?",
-        options: [
-            { text: "Lendo o manual de instruções original, do começo ao fim.", scores: { backend: 2, infra: 1 } },
-            { text: "Vendo vídeos que mostram o resultado visual passo a passo.", scores: { frontend: 3 } },
-            { text: "Apertando todos os botões e 'quebrando' até entender o que cada coisa faz.", scores: { cloud: 2, security: 2 } },
-            { text: "Analisando exemplos prontos e buscando padrões em como eles funcionam.", scores: { data: 2, backend: 1 } },
-            { text: "Observando alguém que já sabe usar e pedindo para explicar o 'porquê'.", scores: { ux: 3 } }
-        ]
-    },
-    {
-        text: "O que mais te irrita em um site ou aplicativo?",
-        options: [
-            { text: "Ele é lindo, mas a fonte é muito pequena e difícil de ler.", scores: { ux: 3 } },
-            { text: "Ele demora mais de 3 segundos para carregar qualquer tela.", scores: { cloud: 2, backend: 1 } },
-            { text: "Os botões e os textos estão visivelmente tortos ou desalinhados.", scores: { frontend: 3 } },
-            { text: "Uma notícia que cita 'estudos apontam' sem mostrar os dados originais.", scores: { data: 3 } },
-            { text: "Pedir minha senha em um site que não parece seguro ou um Wi-Fi público esquisito.", scores: { security: 3, infra: 1 } }
-        ]
-    },
-    {
-        text: "No final de um longo projeto, o que te dá mais orgulho?",
-        options: [
-            { text: "Ver o 'mapa' do sistema que criei: um diagrama de como tudo se conecta.", scores: { backend: 3 } },
-            { text: "Um painel que mostra que tudo funcionou 99.9% do tempo e 50% mais rápido.", scores: { cloud: 3 } },
-            { text: "Uma tela final polida, com animações suaves e que é bonita de ver.", scores: { frontend: 3 } },
-            { text: "Um relatório com um gráfico que revela uma tendência que ninguém esperava.", scores: { data: 3 } },
-            { text: "Ouvir um usuário dizer: 'Nossa, isso é muito fácil de usar!'", scores: { ux: 3 } },
-            { text: "Saber que a rede Wi-Fi que montei está cobrindo o prédio todo sem falhas.", scores: { infra: 3 } },
-            { text: "Um relatório mostrando que todas as 'portas' estão trancadas e seguras.", scores: { security: 3 } }
+            { text: "Criando um esquema complexo da trama e como os capítulos se ligam.", scores: { backend: 3, infra: 1 } },
+            { text: "Imaginando a capa, as ilustrações e a descrição visual dos cenários.", scores: { frontend: 3 } },
+            { text: "Pesquisando o que o público mais gosta de ler atualmente para ser um best-seller.", scores: { data: 3, ux: 1 } },
+            { text: "Escrevendo rascunhos rápidos e usando ferramentas para corrigir erros automaticamente.", scores: { cloud: 3 } },
+            { text: "Focando na jornada emocional do protagonista e como o leitor vai se sentir.", scores: { ux: 3 } }
         ]
     }
 ];
 
 
 //OBJETO DE CARREIRAS (7 ao total)
+// --- DESCRIÇÕES DETALHADAS DAS CARREIRAS ---
 const careers = {
     frontend: {
         icon: "🎨",
-        title: "Desenvolvedor(a) Frontend",
-        subtitle: "Você é visual e adora criar interfaces!",
-        description: "Você tem talento para transformar ideias em experiências visuais incríveis. Adora trabalhar com design, cores e animações, e se emociona quando vê algo que você criou na tela. Seu código tem estilo!",
+        title: "Desenvolvedor Front-end",
+        subtitle: "A ponte entre o design e a tecnologia.",
+        description: "Você é a pessoa que dá vida à internet. Sabe aquele site lindo, com animações suaves e botões que dão vontade de clicar? É obra sua. Seu trabalho mistura lógica com criatividade visual. Você pega o desenho estático do designer e o transforma em código funcional que milhões de pessoas vão usar. Se você gosta de ver o resultado do seu trabalho instantaneamente na tela, esse é o seu lugar.",
         skills: [
-            "HTML, CSS e JavaScript",
-            "React, Vue ou Angular",
-            "Design responsivo",
-            "Atenção a detalhes visuais",
-            "Criatividade e senso estético"
+            "Domínio da tríade: HTML, CSS e JavaScript",
+            "Frameworks modernos (React, Vue ou Angular)",
+            "Design Responsivo (funciona em qualquer tela)",
+            "Acessibilidade (web para todos)",
+            "Olhar crítico para pixel-perfect"
         ]
     },
     backend: {
         icon: "⚙️",
-        title: "Desenvolvedor(a) Backend",
-        subtitle: "Você é lógico(a) e adora resolver problemas!",
-        description: "Você é a pessoa que faz tudo funcionar nos bastidores. Adora criar sistemas robustos, otimizar código e garantir que tudo rode perfeitamente. Para você, a mágica está na lógica!",
+        title: "Desenvolvedor Back-end",
+        subtitle: "O cérebro invisível que faz tudo funcionar.",
+        description: "Você não se importa com a cor do botão, mas sim com o que acontece quando clicam nele. Você constrói a lógica, a segurança e a inteligência do sistema. É quem garante que o dinheiro saia de uma conta e vá para outra, ou que a senha do usuário esteja protegida. Se você curte quebra-cabeças complexos, arquitetura de sistemas e performance, o 'lado do servidor' é sua casa.",
         skills: [
-            "Python, Java, Node.js ou C#",
-            "Bancos de dados (SQL e NoSQL)",
-            "APIs e microsserviços",
-            "Lógica de programação forte",
-            "Pensamento analítico"
+            "Linguagens robustas (Python, Java, Node.js, C#)",
+            "Bancos de Dados (SQL e NoSQL)",
+            "Criação de APIs e integração de sistemas",
+            "Segurança da informação e autenticação",
+            "Estrutura de dados e algoritmos"
         ]
     },
     ux: {
         icon: "💡",
         title: "UX/UI Designer",
-        subtitle: "Você tem empatia e adora facilitar a vida das pessoas!",
-        description: "Você nasceu para entender pessoas e criar experiências que fazem sentido. Combina criatividade com pesquisa, e fica feliz quando vê alguém usando algo intuitivo que você projetou. Você é a voz do usuário!",
+        subtitle: "Onde a psicologia encontra a tecnologia.",
+        description: "Você não escreve código (necessariamente), você projeta a experiência. Sua missão é garantir que a tecnologia seja humana, intuitiva e fácil de usar. Você investiga as dores dos usuários, desenha protótipos e briga para que o produto não seja apenas bonito, mas útil. Se você tem muita empatia e adora resolver problemas de usabilidade, você é a voz do usuário no time.",
         skills: [
-            "Figma, Adobe XD ou Sketch",
-            "Pesquisa com usuários",
-            "Prototipagem e wireframes",
-            "Empatia e comunicação",
-            "Design thinking"
+            "Ferramentas visuais (Figma, Adobe XD)",
+            "Pesquisa com usuários e testes de usabilidade",
+            "Prototipagem e Wireframing",
+            "Arquitetura da Informação",
+            "Empatia e Design Thinking"
         ]
     },
     data: {
         icon: "📊",
         title: "Cientista de Dados",
-        subtitle: "Você adora números e encontrar padrões!",
-        description: "Você vê o que os outros não veem. Adora mergulhar em dados, criar análises e descobrir insights valiosos. Para você, cada número conta uma história, e você é expert em desvendá-las!",
+        subtitle: "O detetive que prevê o futuro.",
+        description: "Onde os outros veem uma planilha chata, você vê histórias e padrões. Seu trabalho é pegar milhões de dados brutos e transformá-los em respostas estratégicas. Você ajuda empresas a prever tendências, cria inteligências artificiais e algoritmos de recomendação (tipo o do TikTok/Netflix). Se você curte matemática, estatística e curiosidade investigativa, essa área é ouro.",
         skills: [
-            "Python e R",
-            "SQL e bancos de dados",
-            "Estatística e matemática",
-            "Machine Learning",
-            "Visualização de dados"
+            "Programação para dados (Python, R, Pandas)",
+            "Estatística e Matemática avançada",
+            "Machine Learning e Inteligência Artificial",
+            "Visualização de Dados (PowerBI, Tableau)",
+            "Storytelling com dados"
         ]
     },
     cloud: {
         icon: "☁️",
-        title: "Engenheiro(a) de Cloud",
-        subtitle: "Você pensa em escala, eficiência e automação!",
-        description: "Você é a pessoa que garante que o sistema aguente 10 ou 10 milhões de usuários. Adora automatizar processos, otimizar custos e usar o poder da 'nuvem' (AWS, Azure, GCP) para criar soluções flexíveis.",
+        title: "Engenheiro de Cloud & DevOps",
+        subtitle: "O guardião da escala e da eficiência.",
+        description: "Sabe quando a Netflix não cai nem na sexta à noite? Culpa sua (no bom sentido). Você cria a infraestrutura virtual que sustenta os aplicativos. Seu foco é automação: fazer com que o código dos programadores chegue aos usuários de forma rápida, segura e sem derrubar o sistema. Se você gosta de otimização, servidores e de ver as coisas rodando como um relógio suíço, vem pra nuvem.",
         skills: [
-            "AWS, Azure ou GCP",
-            "Docker e Kubernetes",
-            "CI/CD (Automação)",
-            "Terraform (Infra as Code)",
-            "Monitoramento e Escalabilidade"
+            "Provedores de Nuvem (AWS, Azure, Google Cloud)",
+            "Contêineres (Docker e Kubernetes)",
+            "Infraestrutura como Código (Terraform)",
+            "Automação de processos (CI/CD)",
+            "Monitoramento de sistemas"
         ]
     },
     infra: {
         icon: "🌐",
-        title: "Analista de Infra e Redes",
-        subtitle: "Você é quem conecta tudo e todos!",
-        description: "Você é a base de tudo. Garante que os computadores conversem entre si, que a internet funcione e que os servidores estejam de pé. Você cuida da 'estrada' por onde os dados passam.",
+        title: "Analista de Infraestrutura",
+        subtitle: "A espinha dorsal da conectividade.",
+        description: "Antes da 'nuvem' existir, existe o físico. Você entende como a internet realmente funciona: cabos, roteadores, servidores físicos e redes complexas. Você garante que a empresa inteira esteja conectada e operante. É uma área para quem gosta de entender o hardware, configurar redes e resolver problemas críticos que param a operação. Sem você, o Wi-Fi não existe.",
         skills: [
-            "Linux e Windows Server",
-            "Roteadores e Switches (Cisco)",
-            "Cabeamento e Wi-Fi",
-            "VPNs e Redes",
-            "Hardware e Servidores"
+            "Sistemas Operacionais (Linux e Windows Server)",
+            "Redes de Computadores (TCP/IP, DNS, VPN)",
+            "Virtualização e Hardware",
+            "Configuração de Roteadores e Switches",
+            "Resolução de problemas críticos (Troubleshooting)"
         ]
     },
     security: {
         icon: "🔒",
-        title: "Analista de Cibersegurança",
-        subtitle: "Você é o(a) guardião(ã) protetor(a) dos dados!",
-        description: "Você pensa como um invasor para poder se defender. Seu trabalho é proteger sistemas, encontrar falhas antes dos 'vilões' e criar barreiras. Você é o escudo que protege as informações.",
+        title: "Especialista em Cibersegurança",
+        subtitle: "A defesa contra as artes das trevas digitais.",
+        description: "Você é o hacker do bem. Seu trabalho é pensar como um invasor para proteger os sistemas antes que eles sejam atacados. Você procura brechas, blinda servidores e garante a privacidade dos dados. É uma carreira de eterna vigilância e aprendizado constante, perfeita para quem tem um senso de proteção aguçado e curiosidade sobre como quebrar (e consertar) coisas.",
         skills: [
-            "Firewalls e Antivírus",
-            "Pentest (Teste de Invasão)",
-            "Análise de Malware",
-            "Criptografia",
-            "Gestão de Risco"
+            "Ethical Hacking e Pentest",
+            "Criptografia e Proteção de Dados",
+            "Análise de Vulnerabilidades",
+            "Firewalls e segurança de rede",
+            "Normas e leis de proteção (LGPD)"
         ]
     }
 };
