@@ -43,7 +43,7 @@ O projeto foca em uma experiência visual imersiva utilizando apenas tecnologias
 
 ## 👩‍💻 Autoras
 
-| [<img src="https://avatars.githubusercontent.com/u/seu-usuario-bia?v=4" width=115><br><sub>Bia Fraga</sub>](https://github.com/seu-usuario-bia) | [<img src="https://avatars.githubusercontent.com/u/seu-usuario-lais?v=4" width=115><br><sub>Laís Lopes</sub>](https://github.com/lahlops21) |
+| [<img src="https://avatars.githubusercontent.com/u/seu-usuario-bia?v=4" width=115><br><sub>Bia Fraga</sub>](https://github.com/biafraga) | [<img src="https://avatars.githubusercontent.com/u/seu-usuario-lais?v=4" width=115><br><sub>Laís Lopes</sub>](https://github.com/lahlops21) |
 | :---: | :---: |
 
 ---
