@@ -79,3 +79,24 @@ if(hackerElement) {
     // Roda ao passar o mouse
     hackerElement.addEventListener('mouseover', () => runHackerEffect(hackerElement));
 }
+
+// --- MENU SANDUÍCHE ---
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuIcon && navLinks) {
+        mobileMenuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuIcon.classList.toggle('active');
+        });
+
+        // Fecha ao clicar num link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuIcon.classList.remove('active');
+            });
+        });
+    }
+});
